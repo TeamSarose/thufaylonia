@@ -1,22 +1,19 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
-// Password check route for debugging
-Route::post('/check-password', [App\Http\Controllers\PasswordCheckController::class, 'checkPassword']);
-Route::get('/password-check', function () {
-    return view('password-check');
-});
+// Tours and Guides routes (temporarily redirect to home)
+Route::get('/tours', function () {
+    return redirect()->route('home');
+})->name('tours');
 
-// Authentication debugging routes
-Route::get('/auth-debug', [App\Http\Controllers\AuthDebugController::class, 'index'])->name('auth.debug');
-Route::post('/auth-debug/test', [App\Http\Controllers\AuthDebugController::class, 'testLogin'])->name('auth.debug.test');
-Route::post('/auth-debug/fix', [App\Http\Controllers\AuthDebugController::class, 'fixUser'])->name('auth.debug.fix');
+Route::get('/guides', function () {
+    return redirect()->route('home');
+})->name('guides');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
