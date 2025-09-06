@@ -65,14 +65,12 @@
 
             @auth
                 <div class="d-flex align-items-center gap-2">
-                    <a href="{{ route('dashboard') }}" class="btn btn-outline-primary btn-sm">Dashboard</a>
+                    <a href="{{ route('dashboard.index') }}" class="btn btn-outline-primary btn-sm">Dashboard</a>
                     <div class="dropdown">
                         <button class="btn btn-light btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             {{ Auth::user()->name ?? 'Account' }}
                         </button>
                         <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="{{ route('profile.edit') }}">Profile</a></li>
-                            <li><hr class="dropdown-divider"></li>
                             <li>
                                 <form method="POST" action="{{ route('logout') }}">
                                     @csrf
