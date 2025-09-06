@@ -107,18 +107,18 @@ $guides = [
 @section('content')
 
 <!-- Hero Section -->
-<section class="position-relative" style="min-height: 72vh;">
+<section class="position-relative vh-100">
     <div class="position-absolute top-0 start-0 w-100 h-100" style="
-        background-image: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop');
+        background-image: url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=1920&auto=format&fit=crop');
         background-size: cover; background-position: center;"></div>
-    <div class="position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.35));"></div>
+    <div class="position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(0,0,0,0.4));"></div>
 
-    <div class="container position-relative text-center text-white d-flex flex-column align-items-center justify-content-center" style="min-height:72vh;">
+    <div class="container position-relative text-center text-white d-flex flex-column align-items-center justify-content-center h-100">
         <h1 class="display-4 fw-bold mb-3">Plan smarter. Travel richer.</h1>
         <p class="lead mb-4" style="max-width: 720px;">Experience the future of travel with AI-powered itineraries and expertly matched chauffeur guides for your perfect journey.</p>
         <div class="d-flex gap-2 mb-4">
-            <a href="/tours" class="btn btn-primary btn-lg">Start Planning</a>
-            <a href="/guides" class="btn btn-outline-light btn-lg">Find a Guide</a>
+            <a href="#featured-tours" class="btn btn-primary btn-lg">Start Planning</a>
+            <a href="#top-guides" class="btn btn-outline-light btn-lg">Find a Guide</a>
         </div>
 
         <!-- Search Bar -->
@@ -160,7 +160,7 @@ $guides = [
 </section>
 
 <!-- Featured Tours -->
-<section class="py-5 bg-light">
+<section id="featured-tours" class="py-5 bg-light">
     <div class="container">
         <div class="text-center mb-5">
             <h2 class="fw-bold display-5">Featured Tours</h2>
@@ -194,7 +194,7 @@ $guides = [
 </section>
 
 <!-- Top Guides -->
-<section class="py-5">
+<section id="top-guides" class="py-5">
     <div class="container">
         <div class="text-center mb-5">
             <h2 class="fw-bold display-5">Top Guides</h2>
@@ -230,7 +230,7 @@ $guides = [
 </section>
 
 <!-- How It Works -->
-<section class="py-5 bg-light">
+<section id="how-it-works" class="py-5 bg-light">
     <div class="container">
         <div class="row text-center g-4">
             <div class="col-12">
@@ -348,7 +348,7 @@ $guides = [
 </section>
 
 <!-- Footer (Enhanced) -->
-<footer class="bg-dark text-white pt-5 pb-4 mt-5">
+<footer id="contact" class="bg-dark text-white pt-5 pb-4 mt-5">
     <div class="container">
         <div class="row g-4 align-items-start">
             <div class="col-12 col-lg-4">

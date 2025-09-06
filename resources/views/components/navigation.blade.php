@@ -23,25 +23,25 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{ request()->routeIs('tours') ? 'active text-primary' : '' }}" 
-                       href="{{ route('tours') }}"
+                       href="{{ request()->routeIs('home') ? '#featured-tours' : route('tours') }}"
                        aria-current="{{ request()->routeIs('tours') ? 'page' : 'false' }}">
                         Tours
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{ request()->routeIs('guides') ? 'active text-primary' : '' }}" 
-                       href="{{ route('guides') }}"
+                       href="{{ request()->routeIs('home') ? '#top-guides' : route('guides') }}"
                        aria-current="{{ request()->routeIs('guides') ? 'page' : 'false' }}">
                         Guides
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="{{ request()->routeIs('home') ? '#how-it-works' : '#' }}">
                         About
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="{{ request()->routeIs('home') ? '#contact' : '#' }}">
                         Contact
                     </a>
                 </li>
